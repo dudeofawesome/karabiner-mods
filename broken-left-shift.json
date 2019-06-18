@@ -1,0 +1,31 @@
+{
+  "title": "Broken Left Shift",
+  "rules": [
+    {
+      "manipulators": [
+        {
+          "description": "Change caps_lock to left shift when used as modifier, escape when used alone",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+  	      ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
